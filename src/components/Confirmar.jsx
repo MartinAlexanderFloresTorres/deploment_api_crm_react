@@ -1,6 +1,6 @@
 function Confirmar({ eliminar, setEliminar, clientes, setClientes }) {
   const handleEliminar = async () => {
-    const url = `${import.meta.env.VITE_API_URL}/${eliminar}`;
+    const url = `https://my-json-server.typicode.com/MartinAlexanderFloresTorres/deploment_api_crm_react/clientes/${eliminar}`;
     try {
       await fetch(url, {
         method: "DELETE",
