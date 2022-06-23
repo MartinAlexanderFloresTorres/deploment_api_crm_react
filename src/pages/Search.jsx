@@ -10,7 +10,7 @@ function Search() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (busquedad != "" && busquedad.trim() != "") {
-      const url = `${import.meta.env.VITE_API_URL}?q=${busquedad}`;
+      const url = `https://my-json-server.typicode.com/MartinAlexanderFloresTorres/deploment_api_crm_react/clientes?q=${busquedad}`;
       try {
         setSpiner(true);
         const respuesta = await fetch(url);

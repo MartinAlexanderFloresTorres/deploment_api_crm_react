@@ -11,7 +11,7 @@ function EditarCliente() {
 
   useEffect(() => {
     const consultarApi = async () => {
-      const url = `${import.meta.env.VITE_API_URL}/${id}`;
+      const url = `https://my-json-server.typicode.com/MartinAlexanderFloresTorres/deploment_api_crm_react/clientes/${id}`;
       try {
         setSpiner(true);
         const respuesta = await fetch(url);

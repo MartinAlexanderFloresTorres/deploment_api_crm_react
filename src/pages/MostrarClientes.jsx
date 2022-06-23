@@ -10,7 +10,7 @@ function MostrarClientes() {
 
   useEffect(() => {
     const consultarApi = async () => {
-      const url = import.meta.env.VITE_API_URL;
+      const url = "https://my-json-server.typicode.com/MartinAlexanderFloresTorres/deploment_api_crm_react/clientes";
       try {
         setSpiner(true);
         const respuesta = await fetch(url);
