@@ -10,7 +10,7 @@ function Search() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (busquedad != "" && busquedad.trim() != "") {
-      const url = `http://localhost:4000/clientes?q=${busquedad}`;
+      const url = `${import.meta.env.VITE_API_URL}?q=${busquedad}`;
       try {
         setSpiner(true);
         const respuesta = await fetch(url);

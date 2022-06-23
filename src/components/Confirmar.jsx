@@ -1,6 +1,6 @@
 function Confirmar({ eliminar, setEliminar, clientes, setClientes }) {
   const handleEliminar = async () => {
-    const url = `http://localhost:4000/clientes/${eliminar}`;
+    const url = `${import.meta.env.VITE_API_URL}/${eliminar}`;
     try {
       await fetch(url, {
         method: "DELETE",

@@ -10,7 +10,7 @@ function MostrarClientes() {
 
   useEffect(() => {
     const consultarApi = async () => {
-      const url = "http://localhost:4000/clientes";
+      const url = import.meta.env.VITE_API_URL;
       try {
         setSpiner(true);
         const respuesta = await fetch(url);
@@ -27,7 +27,7 @@ function MostrarClientes() {
   return (
     <div className="contenedor">
       <h1 className="text-white uppercase font-bold text-2xl">
-        Administra tus 
+        Administra tus
         <span className="text-purple-500"> clientes</span>
       </h1>
       <p>Comienza Administrando tus clientes</p>
@@ -35,27 +35,27 @@ function MostrarClientes() {
       {spiner ? (
         <Spiner />
       ) : (
-       <section className="overflow-auto">
-         <table className="w-full mt-5 table-auto shadow bg-zinc-900">
-          <thead className="bg-purple-600 text-center text-white">
-            <tr>
-              <th className="p-2">Nombre</th>
-              <th className="p-2">Contacto</th>
-              <th className="p-2">Empresa</th>
-              <th className="p-2">Acciones</th>
-            </tr>
-          </thead>
-          <tbody>
-            {clientes.map((cliente) => (
-              <Cliente
-                key={cliente.id}
-                cliente={cliente}
-                setEliminar={setEliminar}
-              />
-            ))}
-          </tbody>
-        </table>
-       </section>
+        <section className="overflow-auto">
+          <table className="w-full mt-5 table-auto shadow bg-zinc-900">
+            <thead className="bg-purple-600 text-center text-white">
+              <tr>
+                <th className="p-2">Nombre</th>
+                <th className="p-2">Contacto</th>
+                <th className="p-2">Empresa</th>
+                <th className="p-2">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {clientes.map((cliente) => (
+                <Cliente
+                  key={cliente.id}
+                  cliente={cliente}
+                  setEliminar={setEliminar}
+                />
+              ))}
+            </tbody>
+          </table>
+        </section>
       )}
 
       {eliminar > 0 && (
