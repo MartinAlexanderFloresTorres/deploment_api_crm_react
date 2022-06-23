@@ -36,20 +36,20 @@ function VerCliente() {
             <span className="normal-case text-zinc-200">{cliente.nombre}</span>
           </h1>
           <div>
-            <h2 className="text-xl mb-3">
+            <h2 className="text-xl mb-3 text-left">
               <span className="text-white font-bold uppercase">Nombre: </span>{" "}
               <span className="text-zinc-100 text-lg">{cliente.nombre}</span>
             </h2>
-            <h2 className="text-xl  mb-3">
+            <h2 className="text-xl  mb-3 text-left">
               <span className="text-white font-bold uppercase">Email: </span>{" "}
               <span className="text-zinc-100 text-lg">{cliente.email}</span>
             </h2>
-            <h2 className="text-xl  mb-3">
+            <h2 className="text-xl  mb-3 text-left">
               <span className="text-white font-bold uppercase">Empresa: </span>{" "}
               <span className="text-zinc-100 text-lg">{cliente.empresa}</span>
             </h2>
             {cliente.empresa && (
-              <h2 className="text-xl  mb-3">
+              <h2 className="text-xl  mb-3 text-left">
                 <span className="text-white font-bold uppercase">
                   Telefono:{" "}
                 </span>{" "}
@@ -59,7 +59,7 @@ function VerCliente() {
               </h2>
             )}
             {cliente.notas && (
-              <h2 className="text-xl ">
+              <h2 className="text-xl text-left">
                 <span className="text-white font-bold uppercase">Notas: </span>{" "}
                 <span className="text-zinc-100 text-lg">{cliente.notas}</span>
               </h2>

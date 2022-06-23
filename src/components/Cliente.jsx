@@ -22,21 +22,21 @@ function Cliente({ cliente, setEliminar }) {
       <td className="p-2">
         <button
           type="button"
-          className="bg-purple-600 hover:bg-purple-500 transition-all w-full block rounded text-white p-1 uppercase font-bold text-xs mb-2"
+          className="bg-purple-600 hover:bg-purple-500 transition-all w-full block rounded text-white p-3 uppercase font-bold text-xs mb-2"
           onClick={() => navigate(`/clientes/${id}`)}
         >
           Ver
         </button>
         <button
           type="button"
-          className="bg-green-600 hover:bg-green-500 transition-all w-full block rounded text-white p-1 uppercase font-bold text-xs mb-2"
+          className="bg-green-600 hover:bg-green-500 transition-all w-full block rounded text-white p-3 uppercase font-bold text-xs mb-2"
           onClick={() => navigate(`/clientes/editar/${id}`)}
         >
           Editar
         </button>
         <button
           type="button"
-          className="bg-red-600 hover:bg-red-500 transition-all w-full block rounded text-white p-1 uppercase font-bold text-xs mb-2"
+          className="bg-red-600 hover:bg-red-500 transition-all w-full block rounded text-white p-3 uppercase font-bold text-xs mb-2"
           onClick={() => {setEliminar(id)}}
         >
           Eliminar

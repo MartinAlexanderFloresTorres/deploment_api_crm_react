@@ -43,7 +43,7 @@ function Search() {
         />
         <input
           type="submit"
-          className="bg-purple-600 w-36  hover:bg-purple-700 rounded-md cursor-pointer px-4 py-2 text-center text-white font-semibold"
+          className="bg-purple-600 w-36  hover:bg-purple-700 rounded-md cursor-pointer px-4 py-4 text-center text-white font-semibold"
           value="Buscar"
         />
       </form>
