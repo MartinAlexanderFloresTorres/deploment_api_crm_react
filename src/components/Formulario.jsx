@@ -23,7 +23,7 @@ function Formulario({ cliente }) {
     try {
       if (cliente.id) {
         //=============== Editar clientes con el metodo PUT ===============//
-        const url = `${import.meta.env.VITE_API_URL}/${cliente.id}`;
+        const url = `https://my-json-server.typicode.com/MartinAlexanderFloresTorres/deploment_api_crm_react/clientes/${cliente.id}`;
         await fetch(url, {
           method: "PUT",
           body: JSON.stringify(values),
@@ -33,7 +33,8 @@ function Formulario({ cliente }) {
         });
       } else {
         //=============== Agregar clientes con el metodo POST ===============//
-        const url = import.meta.env.VITE_API_URL;
+        const url =
+          "https://my-json-server.typicode.com/MartinAlexanderFloresTorres/deploment_api_crm_react/clientes";
         await fetch(url, {
           method: "POST",
           body: JSON.stringify(values),
